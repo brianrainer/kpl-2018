@@ -27,10 +27,10 @@ int main(){
 			ans=multiplication(a,b);
 			break;
 		case '/':
-      if (b == 0){
-        isValid = false;
-        break;
-      }
+      			if (b == 0){
+        			isValid = false;
+        			break;
+      			}
 			ans=division(a,b);
 			break;
 		default:
