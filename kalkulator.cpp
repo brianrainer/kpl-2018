@@ -4,6 +4,8 @@ using namespace std;
 
 int addition (int a, int b);
 int substraction (int a, int b);
+int multiplication (int a, int b);
+int division (int a,int b);
 
 int main(){
 	cout<<"This is a simple calculator. Please enter an expression\n";
@@ -20,6 +22,16 @@ int main(){
 			break;
 		case '-':
 			ans=substraction(a,b);
+			break;
+		case '*':
+			ans=multiplication(a,b);
+			break;
+		case '/':
+      			if (b == 0){
+        			isValid = false;
+        			break;
+      			}
+			ans=division(a,b);
 			break;
 		default:
 			isValid = false;
@@ -41,4 +53,12 @@ int addition(int a, int b){
 
 int substraction(int a, int b){
 	return a-b;
+}
+
+int multiplication(int a, int b){
+	return a*b;
+}
+
+int division(int a, int b){
+	return a/b;
 }
